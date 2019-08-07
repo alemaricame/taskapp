@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h4 class="mt-5 font-weight-bold text-secondary">Agregar tarea</h4>
+
+  <form class="form">
+    <ion-item>
+      <ion-label color="blu" stacked>Título de la tarea</ion-label>
+      <ion-input type="text" placeholder="Título de la tarea"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="blu" stacked>Prioridad</ion-label>
+      <ion-select [(ngModel)]="priority" name="priority" placeholder="Selecciona...">
+        <ion-option value="baja">Baja</ion-option>
+        <ion-option value="media">Media</ion-option>
+        <ion-option value="alta">Alta</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="blu" stacked>Descripción de la tarea</ion-label>
+      <ion-textarea color="blu" placeholder="Descripción de la tarea"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label color="blu" stacked>Encargado de la tarea</ion-label>
+      <ion-input type="text" placeholder="Encargado de la tarea"></ion-input>
+    </ion-item>
+
+    <button ion-button color="blu" (click)="form()">Agregar tarea</button>
+
+</form>
+
+</ion-content>

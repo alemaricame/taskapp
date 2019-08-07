@@ -1,0 +1,29 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<ion-header color=white>
+  <ion-navbar color="white">
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+      <h4 class="mt-5 font-weight-bold text-secondary">Lista de tareas</h4>
+      <h6>Tareas asignadas: </h6>
+      <button ion-button color="blu" (click)="form()">Agregar tarea</button>
+
+      <ion-row>
+          <ion-col col-6 *ngFor="let item of items">
+                <ion-card class="card">
+                        <ion-card-header>
+                        <p style="text-align: right">{{item.idtarea}}</p>
+                        <ion-card-title>{{item.title}}</ion-card-title>
+                        <p>{{item.priority}}</p>
+                         </ion-card-header>
+                          <ion-card-content>
+                              <p>{{item.description}}</p>
+                               <p>{{item.name}}</p>
+                         </ion-card-content>
+                     </ion-card>
+          </ion-col>
+      </ion-row>
+    
+</ion-content>
